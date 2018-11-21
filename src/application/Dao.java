@@ -21,8 +21,8 @@ public class Dao {
 		// Setup the connection with the DB
 		try {
 			connect = DriverManager
-					.getConnection("jdbc:mysql://www.papademas.net/tickets?autoReconnect=true&useSSL=false"
-							+ "&user=fp411&password=411");
+					.getConnection("jdbc:mysql://sql9.freemysqlhosting.net/sql9266379?autoReconnect=true&useSSL=false"
+							+ "&user=sql9266379&password=2uxhi47nE4");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -32,8 +32,8 @@ public class Dao {
 
 	public void createTables() {
 		// variables for SQL Query table creations
-		//final String createTicketsTable = "CREATE TABLE mtokar_tickets(ticket_id INT AUTO_INCREMENT PRIMARY KEY, ticket_issuer VARCHAR(30),"
-		//+ " ticket_description VARCHAR(200))";
+		final String createTicketsTable = "CREATE TABLE mtokar_tickets(ticket_id INT AUTO_INCREMENT PRIMARY KEY, ticket_issuer VARCHAR(30),"
+		+ " ticket_description VARCHAR(200))";
 		final String createUsersTable = "CREATE TABLE mtokar_new_users(uid INT AUTO_INCREMENT PRIMARY KEY, uname VARCHAR(30), upass VARCHAR(30), admin TINYINT(1))";
 		
 		final String createTicketStatusTable = "CREATE TABLE mtokar_tickets_status1(uid INT AUTO_INCREMENT PRIMARY KEY, time_opened DATE, time_closed DATE, status ENUM('Opened', 'Closed'))";
@@ -43,7 +43,7 @@ public class Dao {
 
 			statement = getConnection().createStatement();
 
-			//statement.executeUpdate(createTicketsTable);
+			statement.executeUpdate(createTicketsTable);
 			statement.executeUpdate(createUsersTable);
 			statement.executeUpdate(createTicketStatusTable);
 			System.out.println("Created tables in given database...");

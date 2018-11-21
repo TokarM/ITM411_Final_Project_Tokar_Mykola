@@ -35,6 +35,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	
+	
 	//variable that I used for all classes
 	protected static Stage mainStage = new Stage();
 	public static Stage stageUser = new Stage();
@@ -51,6 +52,9 @@ public class Main extends Application {
     }
 	
 	public static void main(String[] args) throws Exception {
+		//Dao dao = new Dao();
+		//dao.createTables();
+		//dao.addUsers();
 		launch(args);
 	}
 	    
@@ -98,7 +102,7 @@ public class Main extends Application {
 					ps.setString(1, userName1);
 					ps.setString(2, password1);
 					
-					results = ps.executeQuery();
+					results = ps.executeQuery(); 
 					
 					if (results.next()) { 
 						

@@ -213,7 +213,7 @@ public void populateTable() {
 		 	// Grab text, check if it is a valid value, then select specific description from database and insert it to the textArea.
 		 	String text = readTxt.getText();
 		 	String description = "";
-		 	if (text.matches("d+"))
+		 	if (text.matches("^\\d+$"))
 		 	{
 		 		Connection conn = Dao.getConnection();
 			 	

@@ -116,8 +116,7 @@ public class userViewController extends Application {
 			userTable.setItems(data);
 					
 			//This is specific for JavaFX declaration of which column should consist which item.
-			//I found how to do that on Oracle website
-			//I spend too much time struggled with it
+			
 			colmUserId.setCellValueFactory(new PropertyValueFactory<Ticket,String>("userId"));
 			colmTicketId.setCellValueFactory(new PropertyValueFactory<Ticket,String>("ticketId"));
 			colmDescription.setCellValueFactory(new PropertyValueFactory<Ticket,String>("description"));
